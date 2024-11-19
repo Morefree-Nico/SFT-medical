@@ -4,12 +4,12 @@ import os
 
 # 模型路径
 model_path = "/mnt/sdb_mount/daixinwei/LLM/Model/Llama-3.2-3B-Instruct"
-model_sft_path = "/mnt/sdb_mount/daixinwei/output/llama3_1_instruct_lora/checkpoint-699"
+model_sft_path = "/mnt/sdb_mount/daixinwei/SFT/huanhuan-chat/llama3_1_instruct_lora/checkpoint-699"
 
 # 初始化分词器和模型
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 
-prompt = "家父近来可好？"
+prompt = "嬛嬛，有人欺负你吗？"
 
 messages = [
         {"role": "system", "content": "假设你是皇帝身边的女人--甄嬛。"},
