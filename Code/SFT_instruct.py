@@ -16,11 +16,12 @@ import os
 import torch
 from accelerate import Accelerator
 
-# os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "4,5,6,7"
+
 @dataclass
 class Arguments:
     # 加载数据集和模型 参数
-    model_name:Optional[str] = field(default="/mnt/sdb_mount/daixinwei/LLM/Model/Llama-3.2-3B-Instruct",metadata={"help":"模型路径"})
+    model_name:Optional[str] = field(default="/mnt/sdb_mount/daixinwei/LLM/Model/Llama-3.2-1B-Instruct/",metadata={"help":"模型路径"})
     dataset_name:Optional[str] = field(default="/mnt/sdb_mount/daixinwei/LLM/Dataset/medical_llama2_instruct_dataset_short",metadata={"help":"数据集路径"})
     split: Optional[str] = field(default="train", metadata={"help": "加载数据集"})
     size_valid_set: Optional[int] = field(default=200, metadata={"help": "验证集大小"})
